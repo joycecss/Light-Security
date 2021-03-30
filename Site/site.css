@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url(aaa_oficial.png);
+    background-repeat: no-repeat;
+    background-size: 100% 970px ;
+}
+.cabecalho img{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-left: 100px;
+}
+.cabecalho nav{
+    color: white;
+    float: right;
+}
+.cabecalho .caixa{
+    max-width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-right: 200px;
+    padding-top: 50px;
+}
+ul{
+    list-style-type: none;
+}
+ul li {
+    color: white;
+    display: inline;
+    margin: 50px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+}
+ul li:hover a{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
+}
+.mens_ini{
+    margin-top: 310px;
+    margin-left: 100px;
+}
+#h1_tit{
+    color: rgb(250, 186, 68);
+    font-size: 100px;
+}
+#sub_tit{
+    color: white;
+    font-size: 50px;
+}
+#text_tit{
+    color: white;
+    font-size: 20px;   
+}
+#but_ini{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    background-image: linear-gradient(to bottom, orange, rgb(250, 186, 68));
+}
+#but_ini:hover{
+    transform: scale(1.2); 
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;    
+    text-align: center;
+    line-height: 50px;
+}
+footer img{
+    width: 50px;
+    height: 50px;  
+    float: left;
+    margin-left: 100px;
+}
+#span_tel{
+    float: left;
+    margin-left: 110px;
+}
+#span_tel .bi-bi-whatsapp{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_email{
+    float: left;
+    margin-left: 110px;
+}
+#span_email .bi-bi-envelope{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_email .a:hover{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
+}
+#span_tt{
+    float: left;
+    margin-left: 110px;
+}
+#span_tt .bi-bi-twitter{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_tt .a:hover{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
+}
+#span_face{
+    float: left;
+    margin-left: 110px;
+}
+#span_face .bi-bi-facebook{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_face .a:hover{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
+}
+#linguagem{
+    margin-top: 15px;
+    margin-left: 300px;
+    width:150px; 
+    font-family: Arial;
+    border: 1px solid rgb(250, 186, 68);
+    font-size: 15px;
+    padding-right: 20px;
+    padding-left: 30px;
+    background-image: linear-gradient(to bottom, orange, rgb(250, 186, 68));
+    border-radius: 40px;
+}
