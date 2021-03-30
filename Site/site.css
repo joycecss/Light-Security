@@ -42,8 +42,8 @@ ul li:hover a{
     text-decoration: none;
 }
 .mens_ini{
-    margin-top: 400px;
-    margin-left: 200px;
+    margin-top: 310px;
+    margin-left: 100px;
 }
 #h1_tit{
     color: rgb(250, 186, 68);
@@ -58,10 +58,14 @@ ul li:hover a{
     font-size: 20px;   
 }
 #but_ini{
-    background-color: rgb(250, 186, 68);
+    position: relative;
     width: 200px;
     height: 50px;
     border-radius: 40px;
+    background-image: linear-gradient(to bottom, orange, rgb(250, 186, 68));
+}
+#but_ini:hover{
+    transform: scale(1.2); 
 }
 footer {
     position: absolute;
@@ -81,17 +85,61 @@ footer img{
 }
 #span_tel{
     float: left;
-    margin-left: 200px;
+    margin-left: 110px;
+}
+#span_tel .bi-bi-whatsapp{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
 }
 #span_email{
     float: left;
-    margin-left: 200px;
+    margin-left: 110px;
+}
+#span_email .bi-bi-envelope{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_email .a:hover{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
 }
 #span_tt{
     float: left;
-    margin-left: 200px;
+    margin-left: 110px;
+}
+#span_tt .bi-bi-twitter{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_tt .a:hover{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
 }
 #span_face{
     float: left;
-    margin-left: 200px;
+    margin-left: 110px;
+}
+#span_face .bi-bi-facebook{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_face .a:hover{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
+}
+#linguagem{
+    margin-top: 15px;
+    margin-left: 300px;
+    width:150px; 
+    font-family: Arial;
+    border: 1px solid rgb(250, 186, 68);
+    font-size: 15px;
+    padding-right: 20px;
+    padding-left: 30px;
+    background-image: linear-gradient(to bottom, orange, rgb(250, 186, 68));
+    border-radius: 40px;
 }
