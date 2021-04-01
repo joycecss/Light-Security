@@ -2,9 +2,9 @@ body{
     margin: 0;
     padding: 0;
     border: 0;
-    background-image: url(aaa_oficial.png);
+    background-image: url(https://soudeluta.com.br/wp-content/uploads/2018/12/privacidade.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 970px ;
+    background-size: 100% 100% ;
 }
 .cabecalho img{
     width: 150px;
@@ -133,7 +133,7 @@ footer img{
 }
 #linguagem{
     margin-top: 15px;
-    margin-left: 300px;
+    margin-left: 80px;
     width:150px; 
     font-family: Arial;
     border: 1px solid rgb(250, 186, 68);

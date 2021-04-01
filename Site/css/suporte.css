@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url(https://soudeluta.com.br/wp-content/uploads/2018/12/privacidade.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 970px ;
+}
+.cabecalho img{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-left: 100px;
+}
+.cabecalho nav{
+    color: white;
+    float: right;
+
+}
+.cabecalho .caixa{
+    max-width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-right: 200px;
+    padding-top: 50px;
+
+}
+ul{
+    list-style-type: none;
+}
+ul li {
+    color: white;
+    display: inline;
+    margin: 50px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+}
+ul li:hover a{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
+}
+.mens_ini2{
+    margin-top: 400px;
+    margin-left: 200px;
+}
+.divdoform{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    float: left;
+    margin-top: 200px;
+    margin-left: 40%;
+    color: black;
+    opacity: 0.5;
+} 
+
+.label_style{
+    opacity: 1;
+}
