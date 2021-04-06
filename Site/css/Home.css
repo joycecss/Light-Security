@@ -4,7 +4,7 @@ body{
     border: 0;
     background-image: url(https://soudeluta.com.br/wp-content/uploads/2018/12/privacidade.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100% ;
+    background-size: 100%;
 }
 .cabecalho img{
     width: 150px;
@@ -17,10 +17,10 @@ body{
     float: right;
 }
 .cabecalho .caixa{
-    max-width: 80%;
+    max-width: 70%;
     height: 100%;
     margin: 0 auto;
-    margin-right: 200px;
+    margin-left: 30%;
     padding-top: 50px;
 }
 ul{

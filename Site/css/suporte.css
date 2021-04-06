@@ -53,11 +53,86 @@ ul li:hover a{
     height: 300px;
     float: left;
     margin-top: 200px;
-    margin-left: 40%;
+    margin-left: 25%;
     color: black;
-    opacity: 0.5;
 } 
 
 .label_style{
     opacity: 1;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;    
+    text-align: center;
+    line-height: 50px;
+}
+footer img{
+    width: 50px;
+    height: 50px;  
+    float: left;
+    margin-left: 100px;
+}
+#span_tel{
+    float: left;
+    margin-left: 110px;
+}
+#span_tel .bi-bi-whatsapp{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_email{
+    float: left;
+    margin-left: 110px;
+}
+#span_email .bi-bi-envelope{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_email .a:hover{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
+}
+#span_tt{
+    float: left;
+    margin-left: 110px;
+}
+#span_tt .bi-bi-twitter{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_tt .a:hover{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
+}
+#span_face{
+    float: left;
+    margin-left: 110px;
+}
+#span_face .bi-bi-facebook{
+    float: left;
+    margin-top: 14px;
+    margin-right: 10px;
+}
+#span_face .a:hover{
+    color: rgb(250, 186, 68);
+    text-decoration: none;
+}
+#linguagem{
+    margin-top: 15px;
+    margin-left: 80px;
+    width:150px; 
+    font-family: Arial;
+    border: 1px solid rgb(250, 186, 68);
+    font-size: 15px;
+    padding-right: 20px;
+    padding-left: 30px;
+    background-image: linear-gradient(to bottom, orange, rgb(250, 186, 68));
+    border-radius: 40px;
 }
