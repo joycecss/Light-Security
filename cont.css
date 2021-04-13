@@ -1,0 +1,187 @@
+body{
+    margin: 0;
+    border: 0;
+    /*background-image: url(banner.jpeg);
+    background-size: 100% 970px;
+    background-repeat: no-repeat;*/
+}
+
+/* CSS DO CABEÇALHO */
+
+.div_banner{
+    width: 100%;
+}
+.caixa{
+    margin-left: 10%;
+    margin-left: 10%;
+}
+
+.cabecalho{
+    background-image: url(banner.jpeg);
+    background-size: 100% 970px;
+    background-repeat: no-repeat;
+    padding-bottom: 1%;
+}
+
+.cabecalho img{
+    width: 5%;
+    margin-left: 5%;
+}
+.cabecalho nav{
+    float: right;
+    margin-right: 5%;
+    color: white;
+    padding-top: 20px;
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    color: white;
+    display: inline;
+    margin: 50px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#pag{
+    width: 150px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    
+}
+#pag option{
+    color: black;
+    border: none;
+}
+.caixa #but_login{
+    margin-left: 30%;
+    margin-top: 1%;
+    width: 240px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(250, 186, 68);
+    color: white;
+}
+.caixa #but_saiba{
+    width: 240px;
+    height: 60px; 
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    color: rgb(250, 186, 68);
+    border-color: rgb(250, 186, 68);
+}
+.cabecalho #but_login{
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    color: rgb(250, 186, 68);
+    border-color:rgb(250, 186, 68);  
+    width: 120px;
+    height: 40px;
+    margin-left: -10%;
+}
+
+/* CSS DAS INFORMAÇÕES DE CONTATO 'MAPA E FALE CONOSCO' */
+
+.contato {
+    text-align: center;
+    border-bottom: 3px solid gray;
+    background-color: white;
+  
+}
+
+.conteudo_contato h1{
+    font: inherit;
+    font-size: 2.9em;
+    color: #646464;
+}
+
+.inf_contato{
+    background-color: white;
+}
+
+.informacoes .mapa {
+    float: left;
+    padding-top: 25px;
+    margin-left: 70px;
+}
+
+.informacoes .nossos_contatos {
+    float: right;
+    margin-right: 70px;
+}
+
+.nossos_contatos h2{
+    text-align: center;
+    font: inherit;
+    font-size: 2.0em;
+    color: #646464;
+}
+
+.nossos_contatos h3{
+    font: inherit;
+    font-size: 1.5em;
+    color: #646464;
+}
+
+/* CSS DO LOGIN E FOOTER */
+
+.login{
+    margin-top: 40%;
+    background-color:rgb(250, 186, 68);
+    width: 100%;
+    height: 400px;
+}
+#tt-login{
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 4%;
+}
+#tt1-login{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+#inp_login{
+    margin-left: 40%;
+    margin-top: 3%;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    opacity: 0.8;
+}
+#login_entrar{
+    margin-left: 20px;
+    height: 55px;
+    width: 100px;
+    border-radius: 5px;
+    border-color: black;
+    background-color: rgb(250, 186, 68);
+    opacity: 0.8;
+    color: black;
+    font-size: 20px;
+}
+#tt_fot{
+    padding-top: 3%;
+}
+footer{
+    bottom: 0;
+    background-color:white;
+    color: gray;
+    width: 100%;
+    height: 300px;    
+    text-align: center;
+    line-height: 50px;  
+}
+.social{
+    margin-top: 5%;
+    width: 50px;
+    height: 30px;
+}
