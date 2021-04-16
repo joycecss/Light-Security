@@ -1,10 +1,9 @@
 body{
     margin: 0;
     border: 0;
-    background-image: url(../imagem/fundo.jpeg);
     background-size: 100% 970px;
-    background-repeat: no-repeat;
 }
+/* CSS DO CABEÇALHO */
 .div_banner{
     width: 100%;
 }
@@ -36,7 +35,6 @@ body{
   top: 29px;
   left: 15px;
   transition: 0.5s ease-in-out;
-
 }
 .hamburguer:before,
 .hamburguer:after {
@@ -64,7 +62,6 @@ input:checked ~ label .hamburguer:before {
   transform: rotate(90deg);
   top: 0;
 }
-
 input:checked ~ label .hamburguer:after {
   transform: rotate(90deg);
   bottom: 0;
@@ -73,7 +70,7 @@ input:checked ~ label .hamburguer:after {
     background-color: black;
     height: 600px;
     width: 300px;
-    margin-top: -230px;
+    margin-top: 110px;
     position: fixed;
     transition: all .2s linear;
     float: left;
@@ -85,7 +82,6 @@ input:checked ~ label .hamburguer:after {
     transform: translateX(300px);
 }
 /* Subir pagina */
-
 .btn {
     display: flex;
     border-radius: 50%;
@@ -110,15 +106,14 @@ input:checked ~ label .hamburguer:after {
 .btn:hover::after {
     margin-top:-10px;
 }
-
 /* Fim subir pagina */
 .caixa{
     margin-left: 10%;
     margin-left: 10%;
 } 
 .cabecalho img{
-    width: 10%;
-    margin-top: -300px;
+    width: 9%;
+    margin-top: 0px;
     margin-right: 5%;
     float:right;
 }
@@ -150,26 +145,6 @@ li a{
     color: black;
     border: none;
 }
-.caixa #but_login{
-    margin-left: 30%;
-    margin-top: 1%;
-    width: 240px;
-    height: 60px;
-    margin-right: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: rgb(250, 186, 68);
-    color: white;
-}
-.caixa #but_saiba{
-    width: 240px;
-    height: 60px; 
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: transparent;
-    color: rgb(250, 186, 68);
-    border-color: rgb(250, 186, 68);
-}
 .cabecalho #but_login{
     border-radius: 10px;
     font-size: 20px;
@@ -180,78 +155,65 @@ li a{
     height: 40px;
     margin-left: -10%;
 }
-.caixa #titulo1{
-    margin-top: 20%;
-    color: rgb(250, 186, 68);
-    font-size: 100px; 
-    margin-left: 28%;
-    text-shadow: 3px 3px black;
-}
-.caixa #text_tit{
-    color: white;
-    margin-left: 32%;
-    font-size: 30px;
-    text-shadow: 2px 2px black;
-}
-.caixa #text_tit1{
-    color: white;
-    margin-left:10%;
-    font-size: 30px;
-    text-shadow: 2px 2px black;
-}
-.caixa_prin{
-    margin-top: 6%;
-    margin-left: 16%;
-    margin-right: 16%;
-    background-color: white;
-    width: 68%;
-    height: 500px;
-    position: absolute;
-    border-radius: 10px;
-    box-shadow: 10px 2px 2px black;
-}
-#titulo2 {
+/* CSS DAS INFORMAÇÕES DE CONTATO 'MAPA E FALE CONOSCO' */
+.contato {
+    padding-top: 100px;
     text-align: center;
-    margin-top: 40px;
-    font-size: 50px;
-}
-.faixa {
-    width: 100px;
-    height: 5px;
+    border-bottom: 3px solid gray;
     background-color: black;
 }
-.faixa1 {
+.conteudo_contato h1{
+    font: inherit;
+    font-size: 2.9em;
+    color: white;
+    margin-left: 15%;
+}
+.inf_contato{
+    background-color: white;
+}
+.informacoes{
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 100px;
+}
+.informacoes .mapa {
+    float: left;
+    padding-top: 50px;
+    margin-left: 70px;
+}
+.informacoes .nossos_contatos {
     float: right;
-    width: 100px;
-    height: 5px;
-    background-color: black;
+    margin-right: 100px;
+    margin-top: 180px;
 }
-#text_tit2 {
+.nossos_contatos h2{
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
+    font: inherit;
+    font-size: 2.0em;
+    color: #646464;
 }
-.caixa_prin img{
-    width: 100%;
-    height: 410px;
-    margin-top: 1%;
+.nossos_contatos  a {
+    text-decoration: none;
+    color: #646464;
 }
-.caixa2{
-    margin-top: 46%;
-    margin-left: 16%;
-    margin-right: 16%;
-    background-color: white;
-    width: 68%;
-    height: 900px;
-    position: absolute;
-    border-color: rgb(250, 186, 68);
+a {
+    text-decoration: none;
+    color: black;
 }
+.nossos_contatos a:hover{
+    color: rgb(235, 166, 38);
+}
+.nossos_contatos h3{
+    font: inherit;
+    font-size: 1.5em;
+    color: #646464;
+}
+/* CSS DO LOGIN E FOOTER */
 .login{
-    margin-top: 85%;
+    margin-top: 30%;
     background-color:rgb(250, 186, 68);
     width: 100%;
-    height: 400px;
+    height: 370px;
 }
 #tt-login{
     color: black;
@@ -267,6 +229,7 @@ li a{
 #inp_login{
     margin-left: 40%;
     margin-top: 3%;
+    padding-left: 1%;
     width: 300px;
     height: 50px;
     border-radius: 5px;
@@ -274,7 +237,9 @@ li a{
     opacity: 0.8;
 }
 #login_entrar{
-    margin-left: 20px;
+    cursor: pointer;
+    margin-top: 1%;
+    margin-left: 47%;
     height: 55px;
     width: 100px;
     border-radius: 5px;
@@ -284,6 +249,13 @@ li a{
     color: black;
     font-size: 20px;
 }
+#login_entrar:hover {
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+    transition: background-color .5s;
+}
+
 #tt_fot{
     padding-top: 3%;
 }
@@ -300,39 +272,4 @@ footer{
     margin-top: 5%;
     width: 50px;
     height: 30px;
-}
-
-.text_tit3 {
-    font-size: 20pt;
-    font-family: sans-serif;
-    text-align: left;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
-}
-
-.text_destaq {
-    font-style: italic;
-    color: black;
-    font-size: 22pt;
-    font-family: sans-serif;
-    text-align: left;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
-
-}
-
-#botao_orc{
-   
-
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: transparent;
-    color: white;
-    background-color: rgb(250, 186, 68);
-    border-color:black;  
-    width: 250px;
-    height: 80px;
-    margin-left: 35%;
 }

@@ -1,7 +1,7 @@
 body{
     margin: 0;
     border: 0;
-    background-image: url(../imagem/fundo.jpeg);
+    background-image: url(fundo.jpeg);
     background-size: 100% 970px;
     background-repeat: no-repeat;
 }
@@ -161,6 +161,11 @@ li a{
     background-color: rgb(250, 186, 68);
     color: white;
 }
+.caixa #but_login:hover{
+    background-color: #fff;
+    color: rgb(250, 186, 68);
+    transform: scale(1.1);
+}
 .caixa #but_saiba{
     width: 240px;
     height: 60px; 
@@ -169,6 +174,11 @@ li a{
     background-color: transparent;
     color: rgb(250, 186, 68);
     border-color: rgb(250, 186, 68);
+}
+.caixa #but_saiba:hover{
+    background-color: rgb(250, 186, 68);
+    color: black;
+    transform: scale(1.1);
 }
 .cabecalho #but_login{
     border-radius: 10px;
