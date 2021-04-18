@@ -67,7 +67,7 @@ input:checked ~ label .hamburguer:after {
   bottom: 0;
 }
 .barra{
-    background-color: black;
+    background-color:black;
     height: 600px;
     width: 300px;
     margin-top: 110px;
@@ -210,10 +210,10 @@ a {
 }
 /* CSS DO LOGIN E FOOTER */
 .login{
-    margin-top: 30%;
+    margin-top: -8%;
     background-color:rgb(250, 186, 68);
     width: 100%;
-    height: 370px;
+    height: 320px;
 }
 #tt-login{
     color: black;
@@ -239,7 +239,7 @@ a {
 #login_entrar{
     cursor: pointer;
     margin-top: 1%;
-    margin-left: 47%;
+    margin-left: 1%;
     height: 55px;
     width: 100px;
     border-radius: 5px;
@@ -255,7 +255,6 @@ a {
     font-weight: bold;
     transition: background-color .5s;
 }
-
 #tt_fot{
     padding-top: 3%;
 }

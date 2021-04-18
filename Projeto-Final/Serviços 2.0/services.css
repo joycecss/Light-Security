@@ -36,7 +36,6 @@ body{
   top: 29px;
   left: 15px;
   transition: 0.5s ease-in-out;
-
 }
 .hamburguer:before,
 .hamburguer:after {
@@ -64,7 +63,6 @@ input:checked ~ label .hamburguer:before {
   transform: rotate(90deg);
   top: 0;
 }
-
 input:checked ~ label .hamburguer:after {
   transform: rotate(90deg);
   bottom: 0;
@@ -85,7 +83,6 @@ input:checked ~ label .hamburguer:after {
     transform: translateX(300px);
 }
 /* Subir pagina */
-
 .btn {
     display: flex;
     border-radius: 50%;
@@ -110,7 +107,6 @@ input:checked ~ label .hamburguer:after {
 .btn:hover::after {
     margin-top:-10px;
 }
-
 /* Fim subir pagina */
 .caixa{
     margin-left: 10%;
@@ -150,36 +146,6 @@ li a{
     color: black;
     border: none;
 }
-.caixa #but_login{
-    margin-left: 30%;
-    margin-top: 1%;
-    width: 240px;
-    height: 60px;
-    margin-right: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: rgb(250, 186, 68);
-    color: white;
-}
-.caixa #but_login:hover{
-    background-color: #fff;
-    color: rgb(250, 186, 68);
-    transform: scale(1.1);
-}
-.caixa #but_saiba{
-    width: 240px;
-    height: 60px; 
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: transparent;
-    color: rgb(250, 186, 68);
-    border-color: rgb(250, 186, 68);
-}
-.caixa #but_saiba:hover{
-    background-color: rgb(250, 186, 68);
-    color: black;
-    transform: scale(1.1);
-}
 .cabecalho #but_login{
     border-radius: 10px;
     font-size: 20px;
@@ -198,27 +164,23 @@ li a{
     text-shadow: 3px 3px black;
 }
 .caixa #text_tit{
+    margin-top: 3%;
     color: white;
-    margin-left: 32%;
-    font-size: 30px;
-    text-shadow: 2px 2px black;
-}
-.caixa #text_tit1{
-    color: white;
-    margin-left:10%;
+    margin-left: 26%;
     font-size: 30px;
     text-shadow: 2px 2px black;
 }
 .caixa_prin{
-    margin-top: 6%;
+    margin-top: 10.5%;
     margin-left: 16%;
     margin-right: 16%;
     background-color: white;
     width: 68%;
-    height: 500px;
+    height: 635px;
     position: absolute;
     border-radius: 10px;
-    box-shadow: 10px 2px 2px black;
+    box-shadow: 7px 2px 2px black;
+    border: 2px solid black;
 }
 #titulo2 {
     text-align: center;
@@ -240,28 +202,22 @@ li a{
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 .caixa_prin img{
     width: 100%;
     height: 410px;
-    margin-top: 1%;
-}
-.caixa2{
-    margin-top: 46%;
-    margin-left: 16%;
-    margin-right: 16%;
-    background-color: white;
-    width: 68%;
-    height: 900px;
-    position: absolute;
-    border-color: rgb(250, 186, 68);
+    margin-top: 3%;
+    border-radius: 2%;
 }
 .login{
-    margin-top: 85%;
+    margin-top: -8%;
     background-color:rgb(250, 186, 68);
     width: 100%;
-    height: 400px;
+    height: 320px;
+}
+#onda{
+    padding-top: 90%;
 }
 #tt-login{
     color: black;
@@ -294,6 +250,11 @@ li a{
     color: black;
     font-size: 20px;
 }
+#login_entrar:hover{
+    background-color: #fff;
+    color: rgb(250, 186, 68);
+    transform: scale(1.1);
+}
 #tt_fot{
     padding-top: 3%;
 }
@@ -311,16 +272,14 @@ footer{
     width: 50px;
     height: 30px;
 }
-
 .text_tit3 {
     font-size: 20pt;
     font-family: sans-serif;
     text-align: left;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 5%;
+    margin-top: 8%;
 }
-
 .text_destaq {
     font-style: italic;
     color: black;
@@ -330,19 +289,21 @@ footer{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
-
 }
-
 #botao_orc{
-   
-
     border-radius: 10px;
     font-size: 20px;
     background-color: transparent;
     color: white;
     background-color: rgb(250, 186, 68);
     border-color:black;  
+    margin-top: 5%;
     width: 250px;
     height: 80px;
     margin-left: 35%;
+}
+#botao_orc:hover{
+    background-color: black;
+    color: rgb(250, 186, 68);
+    transform: scale(1.1);
 }

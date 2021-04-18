@@ -36,7 +36,6 @@ body{
   top: 29px;
   left: 15px;
   transition: 0.5s ease-in-out;
-
 }
 .hamburguer:before,
 .hamburguer:after {
@@ -64,7 +63,6 @@ input:checked ~ label .hamburguer:before {
   transform: rotate(90deg);
   top: 0;
 }
-
 input:checked ~ label .hamburguer:after {
   transform: rotate(90deg);
   bottom: 0;
@@ -85,7 +83,6 @@ input:checked ~ label .hamburguer:after {
     transform: translateX(300px);
 }
 /* Subir pagina */
-
 .btn {
     display: flex;
     border-radius: 50%;
@@ -110,7 +107,6 @@ input:checked ~ label .hamburguer:after {
 .btn:hover::after {
     margin-top:-10px;
 }
-
 /* Fim subir pagina */
 .caixa{
     margin-left: 10%;
@@ -160,7 +156,6 @@ li a{
     height: 40px;
     margin-left: -10%;
 }
-
 .mens_ini{
     margin-top: 310px;
     margin-left: 0px;
@@ -172,8 +167,6 @@ li a{
     text-align: center;
     margin-left: 450px;
     text-shadow: 3px 3px black;
-    
-
 }
 .sobre{
     margin-bottom: 110px;
@@ -183,27 +176,23 @@ li a{
     text-shadow: 3px 3px black;
     margin-top: 0px;
 }
-
 .letras{
     margin-bottom: 110px;
     color: black;
     font-size: 35px;
     text-align: center;
-    text-shadow: 3px 3px white;
+    text-shadow: 1.5px 1.5px white;
     margin-top: 0px;
 }
-
 .h1_começo{ 
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
 .text_peq{
     color: white;
     font-size: 20px;
     text-shadow: 3px 3px black;
 }
-
     .caixa_conheça{
         max-width: 84%;
         height: 420px;
@@ -214,9 +203,7 @@ li a{
         padding-left: 10px;
         padding-right: 10px;
         border-radius: 5px;
-
     }
-
     .imagem_equipe1{
         width: 46%;
         height: 400px;
@@ -239,12 +226,10 @@ li a{
         float: left;
         border-radius: 5px;
         margin-right: 60px;
-
     }
 .text_equipe1{
     float: left;
 }
-    
     .caixa_meio{
         max-width: 84%;
         height: 240px;
@@ -254,10 +239,7 @@ li a{
         margin-top: 25px; 
         color: black;
         border-radius: 5px;
-
     }
-    
-    
     .frase{
         margin-left: 85px;
         width: 975px;
@@ -269,9 +251,11 @@ li a{
     padding-bottom: 22px;
     font-size: 40px;
     text-shadow: 3px 3px black;
-
+    margin-top: 20px;
 }
-
+    #paragrafo{
+        margin-top: 25px;
+    }
     .caixa_texto{
     max-width: 84%;
     height: 430px;
@@ -284,7 +268,6 @@ li a{
     padding-left: 4%;
     border-radius: 5px;
     }
-
     .img_baixo{
     width: 70%;
     height: 400px;
@@ -293,10 +276,7 @@ li a{
     box-shadow: 3px 3px 5px 2px #ccc;
     margin-left: 15%;
     margin-right: 15%;
-    
-
     }
-
     .diretrizes{
     max-width: 1140px;
     height: 500px;
@@ -308,17 +288,13 @@ li a{
     box-shadow: 3px 3px 5px 2px #ccc;
     border-radius: 20px;
     margin-bottom: 20px;
-
-
     }
-    
     .diretrizes .caixa{
         height: 300px;
         margin: auto;
         width: 85%;
         background-repeat: no-repeat;
     }
-
     .box_dentro{
         display: inline-block;
         background-color: rgb(250, 186, 68);
@@ -328,24 +304,29 @@ li a{
         width: 400px;
         padding-bottom: 60px;
         margin-top: 0px;
-
     }
-    
+    .box_dentro1{
+        display: inline-block;
+        background-color: rgb(250, 186, 68);
+        box-shadow: 3px 3px 5px 2px #ccc;
+        padding: 60px 28px 8px 20px;
+        border-radius: 20px;
+        width: 400px;
+        padding-bottom: 60px;
+        margin-top: 20px;
+    }
     .img{
         width: 100px;
         height: 100px;
+        margin-top: 70px;
     }
-    
 .missao{
     float:left;
      width: 300px;
      height: 350px;
      text-align: center;
     margin-right: 6px rgb(250, 186, 68);
-
-
  }
- 
  .visao{
      float: left;
      top:0px;
@@ -353,34 +334,26 @@ li a{
      height: 350px;
      text-align: center;
       margin-left: 30px;
-
  }
-
  .valores{
      float: left;
      width: 300px;
      height: 350px;
      text-align: center;
       margin-left: 30px;
-
  }
- 
  .text{
      color: black;
  }
-
  #but_ini{
-    position: relative;
     width: 200px;
     height: 50px;
     border-radius: 40px;
     background-image: linear-gradient(to bottom, orange, rgb(250, 186, 68));
 }
-
 #but_ini:hover{
     transform: scale(1.2); 
 }
-
 footer{
     bottom: 0;
     background-color:white;
