@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <!-- DIV PARA PARTE DE FORMULARIO -->
+    <div class="container-form">
+        <div class="login-formulario1">
+            <div class="login-formatacao">   <!-- parte branca -->       
+                <div class="div_Seg">
+                <div class="div_principal">
+                    <div class="div_ini">
+                       <div class="div_seg">
+                           <h1 id="titulo" class="h1_titulo">Calculadora Financeira</h1>
+               
+                         <div class="campo">
+                           <span class="span_sub"> <h3> Quantidade de automóveis: </h3> </span> <br>
+                           <input type="text" id="qtd_onibus" placeholder="Qtd de ônibus" ><br><br>
+                         </div>
+                   
+                           <div class="campo">
+                               <span class="span_sub"> <h3> Quantidade de sensores:  </h3> </span> <br>
+                               <input type="text" id="qtd_sensor" placeholder="Qtd de sensores"><br><br>
+                           </div>
+                   
+                           <span class="span_sub"> <h3> Estado: </h3> </span> <br>
+                               <select id="estado">
+                                   <option value="">-- Selecione seu estado --</option>
+                                   <option value="AC">Acre</option>
+                                   <option value="AL">Alagoas</option>
+                                   <option value="AP">Amapá</option>
+                                   <option value="AM">Amazonas</option>
+                                   <option value="BA">Bahia</option>
+                                   <option value="CE">Ceará</option>
+                                   <option value="DF">Distrito Federal</option>
+                                   <option value="ES">Espírito Santo</option>
+                                   <option value="GO">Goiás</option>
+                                   <option value="MA">Maranhão</option>
+                                   <option value="MT">Mato Grosso</option>
+                                   <option value="MS">Mato Grosso do Sul</option>
+                                   <option value="MG">Minas Gerais</option>
+                                   <option value="PA">Pará</option>
+                                   <option value="PB">Paraíba</option>
+                                   <option value="PR">Paraná</option>
+                                   <option value="PE">Pernambuco</option>
+                                   <option value="PI">Piauí</option>
+                                   <option value="RJ">Rio de Janeiro</option>
+                                   <option value="RN">Rio Grande do Norte</option>
+                                   <option value="RS">Rio Grande do Sul</option>
+                                   <option value="RO">Rondônia</option>
+                                   <option value="RR">Roraima</option>
+                                   <option value="SC">Santa Catarina</option>
+                                   <option value="SP">São Paulo</option>
+                                   <option value="SE">Sergipe</option>
+                                   <option value="TO">Tocantins</option>
+                               </select>
+               
+                             <br> <br> <span class="span_sub"> <h3> Cidade: </h3> </span> <br>
+                               <select id="cidade">
+                                   <option value="">-- Selecione sua cidade --</option>
+                                   <option value="acre">Rio Branco</option>
+                                   <option value="Alagoas">Maceió</option>
+                                   <option value="Amapa">Macapá</option>
+                                   <option value="Amazonas">Manaus</option>
+                                   <option value="Bahia">Salvador</option>
+                                   <option value="Ceara">Fortaleza</option>
+                                   <option value="Distrito Federal">Brasília</option>
+                                   <option value="Espirito Santo">Vitória</option>
+                                   <option value="Goias">Goiânia</option>
+                                   <option value="Maranhão">São Luís</option>
+                                   <option value="Mato Grosso">Cuiabá</option>
+                                   <option value="Mato Grosso do Sul">Campo Grande</option>
+                                   <option value="Minas Gerais">Belo Horizonte</option>
+                                   <option value="Para">Belém</option>
+                                   <option value="Paraiba">Paraná</option>
+                                   <option value="Parana">Curitiba</option>
+                                   <option value="Pernambuco">Recife</option>
+                                   <option value="Piaui">Teresina</option>
+                                   <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                   <option value="Rio Grande do Norte">Natal</option>
+                                   <option value="Rio Grande do Sul">Porto Alegre</option>
+                                   <option value="Rondônia">Porto Velho</option>
+                                   <option value="Roraima">Boa Vista</option>
+                                   <option value="Santa Catarina">Florianópolis</option>
+                                   <option value="São Paulo">São Paulo</option>
+                                   <option value="Sergipe">Aracaju</option>
+                                   <option value="Tocantins">Palmas</option>
+                               </select>    
+                           
+                           <div class="campo">
+                              <br> <span class="span_sub"> <h3>Taxa de criminalidade nas areas consideradas "de risco": </h3> </span> <br>
+                               <input type="text" id="taxa_criminalidade" placeholder="Criminalidade"><br><br>
+                           </div>
+                           
+                   
+                           <button class="but_calcular" onclick="calcular()">Calcule</button>
+                           
+                           <div id="div_msg" class="div_msg"></div>
+                       </div>
+                    </div>
+                   </div>
+                  </div>                  
+            </div>
+        </div>
+    
+   <!-- FINAL DIV FORMULARIO -->
+
+   <!-- COMEÇO DIV ITENS -->
+   <div class="banner-login">
+
+    <a href="../Home - Joyce/html/home.html"><img src="logo.gif" alt="Logo"></a>
+   </div>
+</div>
+
+</body>
+</html>
+
+
+<script>
+    function calcular() {
+        var qtd_total_sensores = Number(qtd_onibus.value) * 9; /* Quantidade de sensores * o preço de cada Sensor  */
+        var preco_final =  Number(qtd_onibus.value) * qtd_total_sensores; /* Quantidade de onibus * o preço total dos sensores */ 
+        var criminalidade = Number(taxa_criminalidade.value) * 0.4; /* 40% pois seria a diminuição da taxa de criminalidade */
+        div_msg.innerHTML = ` <h3> O preço final saíra por: R$ ${preco_final} , já que cada sensor embutido nos automóveis será de ${qtd_total_sensores}. <br>
+            Com a Light Security a taxa de criminalidade caíra em ${criminalidade}%.<br><br>
+            Estado inserido: ${estado.value} <br>
+            Cidade inserida: ${cidade.value} </h3>`;
+    }
+   
+</script>
