@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js" 
+integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A==" 
+crossorigin="anonymous">
+</script>
+<link rel="stylesheet" href="teste.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #d3d3d3;">
+
+    
+    <div class="w3-bar" style="height: 60px; border-bottom: 2px solid #a5a3a3; padding: 10px 50px; background-color: #ffffff">
+        <img src="" alt="" style="width: 50px; float: left; padding-left: 15px;" >
+        <a href="../perfil/perfil.html" class="w3-bar-item w3-button">
+            <i class="far fa-user"></i></a> <!-- Add icone do USER-->
+            <!-- NÃO TOQUE NO LINK DE CIMA!! PERIGO!!! -->
+    
+        <a href="teste.html" class="w3-bar-item w3-button">Inicio</a>
+        <div class="w3-dropdown-click">
+            <button class="w3-button" onclick="myFunction()">
+                Gráficos <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
+                <a href="#" class="w3-bar-item w3-button">Gráfico em tempo Real</a>
+                <a href="../../Home - Joyce/html/home.html" class="w3-bar-item w3-button">Home</a>
+            </div>
+        </div>
+    
+        <div id="divBusca" style="float: right;">
+            <input type="text" id="txtBusca" placeholder="Buscar..."/>
+            <button id="btnBusca">Buscar</button>
+        </div>
+      
+    </div>
+
+    <div class="container">
+        <div class="flex">
+            <div class="describle" style="margin-top: 10px;">
+                <p>Número de sensores:</p>
+                <h3 class="font">53</h3>
+            </div>
+
+            <div class="describle" style="margin: 10px;"> 
+                <p> Dias de monitoramento:</p>
+                <h3 class="font">91</h3>
+            </div>
+
+            <div class="describle" style="margin-top: 10px;" >
+               <p> Dados capturados: </p>
+                <h3 class="font">503</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="test">
+            <div class="style">
+            <div class="describle2" >
+                <div class="card">
+                    <div class="canva">
+                    <canvas id="chart" width="300" height="150" style="display: block; box-sizing: border-box; height: 150px; width: 300px;"></canvas>
+            </div>
+            </div>
+        </div>
+
+          <div class="describle2">
+              <h3>Notificações</h3>
+                <div class="noticia">
+                    <img src="Design sem nome.gif" alt="" id="image" >
+                </div>
+       <!--          <div class="noticia">
+                    <img src="Design sem nome.gif" alt="" style="width: 40%; height: 40%px; border: 5px solid red;" >
+                </div>
+                <div class="noticia">
+                  <img src="Design sem nome.gif" alt="" style="width: 40%; height: 40%px; border: 5px solid red;" >
+             </div>
+ -->
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="test">
+            <div class="style">
+              <div class="describle2">
+                <div class="card">
+                <div class="canva">
+                <canvas id="chart1" width="300" height="150" style="display: block; box-sizing: border-box; height: 150px; width: 300px;"></canvas>
+              </div>
+              </div>
+            </div>
+            <div class="describle2">
+                <h3>Notificações</h3>
+                  <div class="noticia">
+                      <img src="Design sem nome.gif" alt="" id="image" >
+                  </div>
+            </div>
+          </div>
+        </div>
+  
+</body>
+</html>
+
+
+
+      
+<script>
+    function myFunction() {
+      var x = document.getElementById("demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      } 
+    }
+   </script> 
+    
+
+    <canvas id="myChart"></canvas>
+    <canvas id="mixedChart"></canvas>
+    
+<script>
+
+var ctx = chart.getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['1', '2', '3', '4', '5', '6','7','8','9','10'],
+        datasets: [{
+            label: 'Luminosidade',
+            data: [400, 500, 487, 317, 1021, 987,1002,875,798,655],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+ 
+var ctx1 = chart1.getContext('2d');
+
+var mixedChart = new Chart(ctx1, {
+    type: 'line',
+    data: {
+        datasets: [{
+        type: 'bar',
+            label: 'Luminosidade',
+            data: [400, 500, 487, 327, 1021, 987,1002,875,798,655],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+            ],
+        }, {
+            label: 'Taxa de Criminalidade em %',
+            data: [650, 500, 600, 700, 150, 230,300,230,390,450],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }],
+        labels: ['1', '2', '3', '4', '5', '6','7','8','9','10']
+    },
+});
+const config = {
+  type: 'scatter',
+  data: data,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+};
+var mixedChart = new Chart(ctx1, {
+   type: 'bar',
+   data: {
+       datasets: [{
+            label: 'Luminosidade',
+            data: [400, 500, 487, 317, 1021, 987,1002,875,798,655],
+           type: 'line',
+           // this dataset is drawn on top
+           order: 2
+       }, {
+        label: 'Taxa de Criminalidade em %',
+        data: [650, 500, 600, 700, 150, 230,300,230,390,450],
+           // this dataset is drawn below
+           order: 1
+       }],
+       labels: ['1', '2', '3', '4', '5', '6','7','8','9','10']
+   },
+   options: options
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+   **************SLIDE SHOW**************
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="../light-security/Light-Security/Projeto-Final/contato/logo.gif" style="width:100%">
+  <img class="mySlides" src="../light-security/Light-Security/Projeto-Final/contato/logo.gif" style="width:100%">
+  <img class="mySlides"  src="../light-security/Light-Security/Projeto-Final/contato/WhatsApp Image 2021-04-05 at 21.06.19.jpeg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html> -->

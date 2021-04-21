@@ -1,0 +1,150 @@
+/* Importanto a Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#divBusca{
+    background-color:#E0EEEE;
+    border:1px solid #000000;
+    border-radius:10px;
+    width:271px;
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:6px;
+    font-size:18px;
+    border:none;
+    height:30px;
+    width:191px;
+    cursor: pointer;
+  }
+  
+  #btnBusca{
+    border: none;
+    float:left;
+    height:30px;
+    border-radius:0 7px 7px 0;
+    width:77.5px;
+    font-weight:bold;
+    background:#faba44;
+  }
+
+  #btnBusca:hover {
+    background-color: #e77532;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .container {
+     margin-top: 12px;
+     margin-left: 60px;
+     margin-right: 60px;
+  }
+
+  .describle{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 90%;
+    padding: 15px;
+    margin-bottom:10px;
+    border-radius: 10px;
+  }
+
+  .flex { /* deixando as caixas uma do lado da outra */
+    display: flex;
+    width: 100%;
+    height: 180px;
+  }
+
+.style {
+  display: flex;
+  flex-wrap: wrap; /* permite ficar na mesma linha// um do lado do outro */
+  border-radius: 10px;
+  
+}
+
+.style > *:nth-child(1) {
+  flex: 1 1 70%;
+  min-width: 25ch;
+ 
+}
+
+.style > *:nth-child(2) {
+  flex: 1 1 30%;
+  min-width: 15ch; /* tamanho minimo == define se vai para baixo ou n qnd diminui a tela */
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+
+.style > *:nth-child(1) {
+  flex: 1 1 70%;
+  min-width: 25ch;
+ 
+}
+
+.style > *:nth-child(2) {
+  flex: 1 1 30%;
+  min-width: 15ch; /* tamanho minimo == define se vai para baixo ou n qnd diminui a tela */
+  background-color: #fdffff;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+
+.test {
+  width: 100%;
+}
+
+
+.card{
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.font {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.describle p {
+  background: linear-gradient(to right, #eba134,  #e77532 , rgb(179, 71, 8) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: large;
+  font-weight: bold;
+}
+
+.canva {
+  width: 80%;
+}
+
+.describle2  h3 {
+  background: linear-gradient(to right, #faba44,  #e77532 , rgb(179, 71, 8) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.noticia #image{
+  width: 77%;
+  height: 80%;
+  margin-left: 10%;
+}
