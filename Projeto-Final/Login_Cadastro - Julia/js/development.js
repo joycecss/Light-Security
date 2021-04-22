@@ -25,10 +25,14 @@ function access() {
 }
 
 function conformation() {
-    if(Email.value == '' || Senha.value == ''){
-        alert('Todos os campos devem ser inseridos');
+    var Email = inp_email.value;
+    var Senha = inp_senha.value;
+
+    if(Email == 'admin' && Senha == 'admin'){
+        alert('Entrada confirmada!');
+        window.location.href = "../Dash/graficos/teste.html";
     }
     else {
-        alert('Entrada confirmada!');
+        alert('Email ou Senha inválidos');
     }
 }
