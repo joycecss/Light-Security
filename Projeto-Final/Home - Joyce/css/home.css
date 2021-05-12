@@ -8,6 +8,7 @@ body{
 .div_banner{
     width: 100%;
 }
+/* Começo Menu */
 *,
 *:before,
 *:after {
@@ -84,6 +85,23 @@ input:checked ~ label .hamburguer:after {
 #menu-hamburguer:checked ~ .barra{
     transform: translateX(300px);
 }
+nav{
+    margin-left: 10%;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+    padding-top: 25px;
+    color: white;
+    display: list-item;
+    margin: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+/* Fim menu */
 /* Subir pagina */
 
 .btn {
@@ -112,6 +130,7 @@ input:checked ~ label .hamburguer:after {
 }
 
 /* Fim subir pagina */
+
 .caixa{
     margin-left: 10%;
     margin-left: 10%;
@@ -122,22 +141,6 @@ input:checked ~ label .hamburguer:after {
     margin-right: 5%;
     float:right;
 }
- nav{
-    margin-left: 10%;
-    color: white;
-}
-ul{
-    list-style-type: none;
-}
-li a{
-    text-decoration: none;
-    padding-top: 25px;
-    color: white;
-    display: list-item;
-    margin: 40px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-} 
 #pag{
     width: 150px;
     border: none;
@@ -327,9 +330,11 @@ li a{
     width: 100%;
     height: 320px;
 }
+/* Começo Wave */
 #onda{
     padding-top: 90%;
 }
+/* Fim Wave */
 #tt-login{
     color: black;
     font-size: 50px;
