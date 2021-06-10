@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+ }
+ html, body {
+     height: 100%;
+     background-image: url(../Calculadora/aaa_oficial.png);
+      font-family: "Poppins", sans-serif;
+ }
+    .h1_titulo{
+        margin-right: 50px;
+    }
+    .div_msg{
+        font-family: "Poppins", sans-serif;
+        margin-top: 50px;
+        color: rgb(34, 32, 32);
+    }
+    .div_ini{ 
+        width: 500px;
+        height: 700px;
+         margin-top: 7%; 
+        /* margin-left: 37%; */
+    }
+    .span_sub{
+        font-family: "Poppins", sans-serif;
+        font-size: 12px;
+        margin-bottom: -20px;
+        color: rgb(0, 0, 0);
+        display: block;
+      
+        margin-top: 1px ;
+    }
+#titulo {
+    font-family: "Poppins", sans-serif;
+    color: rgb(58, 56, 56);
+    text-shadow: 2px 3px  rgba(29, 29, 31, 0.342);
+    margin-left: 7%;
+    margin-bottom: 5%;   
+    }
+    input {
+        border-radius: 6px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 3px;
+    }
+.but_calcular {
+    font-size: 1.5em;
+    background: rgb(175, 0, 0);
+    border: 0;
+    color: black;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /*sombra da caixa*/ 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /*sombra do texto*/ 
+    margin-left: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+.but_calcular:hover {
+    box-shadow: inset 2px 2px 2px  rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+}
+ .container-form{
+     height: 100%; /* 100% de altura */
+     display: flex; /* posiciona os itens */
+    /* border: 3px solid white; */  
+     border-radius: 8px; /* deixar arredondado */
+     flex-direction: row; /* direção do conteiner é em linha, cada div vai ficar uma do lado da outra*/
+     
+ }
+ .login-formulario1{
+    margin-top: 4%;
+    width: 50%;
+    height: 85%;
+     display: flex;
+     flex-direction: row; /*  */
+     align-items: center;/* os itens são alinhados na vertical-center */
+     justify-content: center;/*  horizontal quando o flex for row*/
+     /* background-color: #da3737; */
+     background-image: url(login-escuro.png);  
+ }
+ .banner-login img {
+     position: relative; 
+ }
+ .div_Seg {
+     margin-top: 50px;
+ }
+ .banner-login h2 {
+     color: rgb(0, 0, 0);
+     position: relative;
+ }
+ .banner-login {
+    width: 50%;
+     /*height: 100%; */
+     background-color: #000307;
+     height: 119%;
+     display: flex; /* CENTRALIZAR NA VERTICAL-HORIZONTAL */
+     flex-direction: column; /* um em cima do outrp */
+     align-items: center; /*  alin itens qnr flex-direction trabalha como column trabalha na  horizontalk */
+     justify-content: center; /* centralizar na vertical */
+ }
+ .login-formatacao {
+     margin-top: 100px;
+     width: 85%; /* cetou para o 'max-width' usar '100%' do 500px*/
+     height: 145%;
+     max-width: 600px;
+     display: flex;
+     flex-direction: column;
+     background-color:#D3D3D3;
+     padding: 50px;
+    /*  border: 3px solid rgb(0, 0, 0); */
+     border-radius: 10px;
+     opacity: 0.9;
+ }
+ .formulario {
+     padding-top: 20px;
+     font-family: "Poppins", sans-serif;
+     font-size: large;
+ }
+ .formulario input[type="checkbox"]{
+     padding: 1px;
+     width: 10%;
+ }
+ .formulario input {
+     width: 100%;
+
+     border-radius: 3px;
+     padding: 5px 3px;
+     border: 0.5px solid rgb(160, 153, 153);
+ }
+ .login-titulo h2{
+     padding-top: 20px;
+     font-family: "Poppins", sans-serif;
+    /*  text-align: center; */
+     /* align-items:center ; */   
+ }
+ .login-formatacao button {
+     width: 80%; /* tamanho % da div */
+     background: linear-gradient(135deg, #6e8efb, #a777e3);
+     border: 0;
+     color: #fff;
+     margin-top: 40px;
+     border-radius: 3px;
+     padding: 8px 2px;
+     margin-bottom: 20px;
+ }
+ .login-formatacao button:hover{
+     color: rgb(255, 255, 255);
+     transform: scale(1.05); /* aumento do botão */
+     transition: .2s; /* efeito de transição */
+ }
+ .login-titulo h2{
+     margin-bottom: 20px;
+     position: relative;
+ }
+ .login-titulo h2::before {
+    content: ' ';
+    position: absolute;
+    height: 4px;
+    width: 110px;
+    bottom: -2px; /* posição da linha */
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}

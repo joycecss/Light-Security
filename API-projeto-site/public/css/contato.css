@@ -1,0 +1,274 @@
+body{
+    margin: 0;
+    border: 0;
+    background-size: 100% 970px;
+}
+/* CSS DO CABEÇALHO */
+.div_banner{
+    width: 100%;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.menu {
+  background: #fff;
+  border-radius: 30%;
+  width: 60px;
+  height: 60px; 
+  float: left;
+  bottom: 25px;
+  margin-left: 40px;
+  top: 30px;
+  position: fixed;
+  border: 1px solid black;
+}
+.hamburguer {
+  position: relative;
+  display: block;
+  background: #000;
+  width: 30px;
+  height: 2px;
+  top: 29px;
+  left: 15px;
+  transition: 0.5s ease-in-out;
+}
+.hamburguer:before,
+.hamburguer:after {
+  background:rgb(250, 186, 68);
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.hamburguer:before {
+  top: -10px;
+}
+.hamburguer:after {
+  bottom: -10px;
+}
+#menu-hamburguer {
+  display: none;
+}
+input:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+input:checked ~ label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+.barra{
+    background-color:black;
+    height: 600px;
+    width: 300px;
+    margin-top: 110px;
+    position: fixed;
+    transition: all .2s linear;
+    float: left;
+    left: -300px;
+    border-radius: 30px;
+    padding-left: 40px;
+}
+#menu-hamburguer:checked ~ .barra{
+    transform: translateX(300px);
+}
+/* Subir pagina */
+.btn {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(250, 186, 68);
+    text-decoration: none;
+    padding-top: 17px;
+}
+.btn::after {
+    content: "^";
+    font-size: 35px;
+    font-weight: bold;
+    color: aliceblue;
+    transition: margin-top 250ms;
+}
+.btn:hover::after {
+    margin-top:-10px;
+}
+/* Fim subir pagina */
+.caixa{
+    margin-left: 10%;
+    margin-left: 10%;
+} 
+.cabecalho img{
+    width: 9%;
+    margin-top: 0px;
+    margin-right: 5%;
+    float:right;
+}
+ nav{
+    margin-left: 10%;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+    padding-top: 25px;
+    color: white;
+    display: list-item;
+    margin: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+#pag{
+    width: 150px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    
+}
+#pag option{
+    color: black;
+    border: none;
+}
+.cabecalho #but_login{
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    color: rgb(250, 186, 68);
+    border-color:rgb(250, 186, 68);  
+    width: 120px;
+    height: 40px;
+    margin-left: -10%;
+}
+/* CSS DAS INFORMAÇÕES DE CONTATO 'MAPA E FALE CONOSCO' */
+.contato {
+    padding-top: 100px;
+    text-align: center;
+    border-bottom: 3px solid gray;
+    background-color: black;
+}
+.conteudo_contato h1{
+    font: inherit;
+    font-size: 2.9em;
+    color: white;
+    margin-left: 15%;
+}
+.inf_contato{
+    background-color: white;
+}
+.informacoes{
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 100px;
+}
+.informacoes .mapa {
+    float: left;
+    padding-top: 50px;
+    margin-left: 70px;
+}
+.informacoes .nossos_contatos {
+    float: right;
+    margin-right: 100px;
+    margin-top: 180px;
+}
+.nossos_contatos h2{
+    text-align: center;
+    font: inherit;
+    font-size: 2.0em;
+    color: #646464;
+}
+.nossos_contatos  a {
+    text-decoration: none;
+    color: #646464;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.nossos_contatos a:hover{
+    color: rgb(235, 166, 38);
+}
+.nossos_contatos h3{
+    font: inherit;
+    font-size: 1.5em;
+    color: #646464;
+}
+/* CSS DO LOGIN E FOOTER */
+.login{
+    margin-top: -8%;
+    background-color:rgb(250, 186, 68);
+    width: 100%;
+    height: 320px;
+}
+#tt-login{
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 4%;
+}
+#tt1-login{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+#inp_login{
+    margin-left: 40%;
+    margin-top: 3%;
+    padding-left: 1%;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    opacity: 0.8;
+}
+#login_entrar{
+    cursor: pointer;
+    margin-top: 1%;
+    margin-left: 1%;
+    height: 55px;
+    width: 100px;
+    border-radius: 5px;
+    border-color: black;
+    background-color: rgb(250, 186, 68);
+    opacity: 0.8;
+    color: black;
+    font-size: 20px;
+}
+#login_entrar:hover {
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+    transition: background-color .5s;
+}
+#tt_fot{
+    padding-top: 3%;
+}
+footer{
+    bottom: 0;
+    background-color:white;
+    color: gray;
+    width: 100%;
+    height: 300px;    
+    text-align: center;
+    line-height: 50px;  
+}
+.social{
+    margin-top: 5%;
+    width: 50px;
+    height: 30px;
+}
