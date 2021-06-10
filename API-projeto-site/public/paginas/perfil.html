@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js" 
+integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A==" 
+crossorigin="anonymous">
+</script>
+<link rel="stylesheet" href="perfil-estilo.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #1C1C1C;">
+
+    
+    <div class="w3-bar" style="height: 60px; border-bottom: 2px solid #a5a3a3; padding: 10px 50px; background-color: #ffffff">
+        <img src="" alt="" style="width: 50px; float: left; padding-left: 15px;" >
+        <a href="perfil.html" class="w3-bar-item w3-button">
+           <i class="far fa-user"></i>
+        </a> <!-- Add icone do USER-->
+            <!-- NÃO TOQUE NO LINK DE CIMA!! PERIGO!!! -->
+    
+        <a href="../graficos/teste.html" class="w3-bar-item w3-button">Home</a>
+        <div class="w3-dropdown-click">
+            <button class="w3-button" onclick="myFunction()">
+                Gráficos <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+        </div>
+    
+        <div id="divBusca" style="float: right;">
+            <input type="text" id="txtBusca" placeholder="Buscar..."/>
+            <button id="btnBusca">Buscar</button>
+        </div>
+      
+    </div>
+
+    <div class="container">
+            <div class="describle" style="margin-top: 10px;">
+               <div class="style">
+                    <img src="user-removebg-preview.png" alt="" id="img">
+               </div> 
+
+                   <div id="user"> 
+                        <div class="line">
+                    </div>
+                    <div class="line2">
+                    </div>
+                      Usúario
+                   </div>
+
+               <div class="form">
+                    <label>Nome de Usuario:</label>  
+                    <div class="teste">
+                        <input type="text" id="nome"  placeholder="Ex: Maria_Silva" required>
+                    </div>
+                    
+                    <label>Email:</label>
+                    <div class="teste">
+                        <input type="text" id="email"  placeholder="Ex: Mariasilva@gmail.com" required>
+                    </div>
+    
+                    <label>Telefone:</label>
+                    <div class="teste">
+                        <input type="text" id="tel"  placeholder="Ex: (xx) xxxxx-xxxx" required>
+
+                        <button id="btn" onclick="confirm()">Confirmar</button>
+                    </div>
+                  
+             
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+ 
+function confirm() {
+    
+    if(nome.value == '' || email.value == '' || tel.value < 8){
+        alert('Todos os campos devem ser inseridos corretamente');
+    }
+    else {
+        alert('Atualização efetuada com sucesso');
+    }
+}
+
+
+</script>

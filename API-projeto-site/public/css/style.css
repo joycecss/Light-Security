@@ -1,0 +1,521 @@
+/* tirando os padrões estabelecidos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* medida das bordas sera contada com a medida de altura e largura */
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    display: flex;  /* alinha um do lado do outro */
+    justify-content: center; /* para centralizar as divs */
+    align-items: center;/* alinhar verticalmente ao center/ o align precisa ter altura definida para conseguir se basear */
+    height: 100vh; /* altura a partir do vierpontheight, o 100% n vai pq o body n tem altura definida*/
+    /* medidas relativas são relativas à algo */
+    background-color: #ecf0f1;
+    /* border: 5px solid red; */
+}
+/* classe que esta em todos os conteudos */
+.content {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 1085px;
+    height: 83%;
+    justify-content: space-between;/* centraliza na vertical/ coloca um espaço entre as duas */
+    align-items: center;/* foi definido a altura, por isso funciona */
+    position: relative;/* vai se basear nele */
+   /*  border: 5px solid rgba(56, 158, 9, 0.781); */
+}
+.content::before {
+    content: "";
+    position: absolute; /* ele se baseia no anterior a ele, por isso q o anterior deve ter um Relative */
+    background-color: #000000;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  /*   border: 5px solid rgb(87, 22, 209); */
+    left: 0;
+}
+.title {
+    font-size: 28px; /* tamanho da fonte */
+    font-weight: bold;/* estilo da fonte = negrito */
+    text-transform: capitalize; /* pega as primeiras letras separadas e coloca em caixa alta */
+    /* order: 5px solid rgb(45, 153, 241); */
+
+}
+.title-primary, .title-second{
+   color: #e0c214;
+}
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;/* altura da linha */
+}
+.description-primary {
+    color: #fff;
+}
+.description-second {
+    color: #7f8c8d;
+}
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center; /* alinhar ele mesmo ao centro, usando o display flex, ele vira um filho do form */
+    border: none; 
+    margin-top: 1rem;
+}
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color .5s;
+}
+.btn-primary:hover {
+    background-color:  #e0c214;
+    color: #000000;
+    border: none;
+}
+.btn-second {
+    background-color: #fff;
+    border: 1px solid #000;
+    transition: background-color .5s;
+    /* transition + propriedade que quero mudar e o tempo */
+    color: #000;
+}
+.btn-second:hover {
+    background-color: #e0c214;
+    color: #fdfdfd;
+    border: none;
+}
+.first-content {
+    display: flex; /* coloca uma do lado da outra */ 
+   /*  border: 5px solid red; */
+}
+.first-content .second-column {
+    z-index: 11;/* tem que ser maior q o outro para sobressair */
+   /*  border: 5px solid red; */
+}
+.first-column {
+    text-align: center;
+    width: 40%;/* definindo os valores mais a 'risca' do flex */
+    z-index: 10; /* sobrepõe-se */
+   /*  border: 5px solid red; */
+}
+.second-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /*  border: 5px solid red; */
+}
+.social-media {
+    margin: 1rem 0;
+}
+/* pseu-classe NOT() */
+.link-social-media:not(:first-child){
+    margin-left: 10px; /* não quer q o primeiro filho tenhas as propriedades */
+}
+.link-social-media .item-social-media {
+    transition: background-color .5s; /* maior o segundo mais tempo leva */
+}
+.link-social-media:hover .item-social-media{
+    background-color: #e0c214;
+    color: rgb(0, 0, 0);
+    border-color:#e0c214;
+}
+.list-social-media {
+    display: flex;
+    list-style-type: none;
+}
+.item-social-media {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center; /* o font é quase que um texto, ent precisa arrumar a altura */
+    color: #95a5a6;
+}
+.form { 
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+.form input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+}
+input:-webkit-autofill   /* para tirar a colocaração ja posta do chrome de dentro do input */
+{    
+    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important; /* ceia uma sombra interna com a mesma colocaração cinza */
+    -webkit-text-fill-color: #000 !important;/* rwxto dentro do fill */
+}
+.label-input {
+    background-color: #ecf0f1; /* muda o fundo do icone */
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+.icon-modify {
+    color: #7f8c8d; /* coloração do icone */
+    padding: 0 5px;
+}
+/* second content*/
+/* sobrepondo os conteudos*/
+.second-content {
+    position: absolute;  /* posiciona de forma relativa em relação a div */
+    display: flex;
+}
+.second-content .first-column {
+    order: 2;
+    z-index: -1;
+}
+.second-content .second-column {
+    order: 1;
+    z-index: -1;
+}
+.password {
+    color: #000000;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+.password::first-letter {
+    text-transform: capitalize; /* primeira letra maiuscula */
+}
+.sign-in-js .first-content .first-column {
+    z-index: -1;
+}
+.sign-in-js .second-content .second-column {
+    z-index: 11;
+}
+.sign-in-js .second-content .first-column {
+    z-index: 13; /* fica na frente do content::before */
+}
+/* quando essa classe for convocada */
+/* quando chegar no VALOR do left */
+.sign-in-js .content::before {
+    left: 60%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    /* bounce- animação que vai de la para ca */
+
+    z-index: 12; /* vai ficar sobre o sign-in */
+}
+/* quando essa classe estiver no body */
+/*  Levando o lado preto para o 'lado'  */
+.sign-up-js .content::before {
+    animation: slideout 1s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+
+    z-index: 12; 
+}
+/* Quando for... */
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+    z-index: -1;  /* quando clicado no botão, estes terão q desaparecer */
+}
+.sign-up-js .first-content .second-column {
+    z-index: 11; /* Tem que aparecer e vai para frente */
+}
+.sign-up-js .first-content .first-column {
+    z-index: 13;    
+}
+/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
+.sign-in-js .first-content .second-column {
+
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+}
+.sign-up-js .second-content .second-column {
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+}
+/*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
+/* aminação do css é feito com KeyFrame */
+@keyframes deslocamentoEsq {
+    from { /* de onde sai */
+        left: 0; /* total a esquerda */
+        opacity: 1;
+        z-index: 12;
+    }
+    /* entre eles, quando atingir isso, ira fazer isso */
+    25% {
+        left: -80px;
+        opacity: .5;
+        /* z-index: 12; NÃO HÁ NECESSIDADE */
+    }
+    50% {
+        left: -100px;
+        opacity: .2;
+        /* z-index: 12; NÃO HÁ NECESSIDADE */
+    }
+    to { /* de onde para */
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+@keyframes deslocamentoDir {
+    from {
+        left: 0;
+        z-index: 12;
+    }
+    25% {
+        left: 80px;
+        /* z-index: 12;  NÃO HÁ NECESSIDADE*/
+    }
+    50% {
+        left: 100px;
+        /* z-index: 12; NÃO HÁ NECESSIDADE*/
+        /* background-color: yellow;  Exemplo que dei no vídeo*/
+    }
+    to {
+        left: 110px;
+        z-index: -1;
+    }
+}
+/*ANIMAÇÃO CSS*/
+@keyframes slidein {
+    from {
+        left: 0;
+        width: 40%;
+    }
+    25% {
+        left: 5%;
+        width: 50%;
+    }
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+    75% {
+        left: 45%; /* tem que ser abaixo do 60 */
+        width: 50%;
+    }
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+@keyframes slideout {
+    from {
+        left: 60%;
+        width: 40%;
+    }
+    25% {
+        left: 45%;
+        width: 50%;
+    }
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+    75% {
+        left: 5%;
+        width: 50%;
+    }
+    to {
+        left: 0; /* estrema direita */
+        width: 40%;
+    }
+}
+/*deixando 'resosivo para tela com uma largura FIXA de 1040px'*/
+@media screen and (max-width: 1040px) {
+    .content {
+        width: 100%;
+        height: 100%;
+    }  
+    .first-content, .second-content {
+        flex-direction: column;
+        justify-content: space-around;
+        /* A propriedade justify-content 
+        define o alinhamento dos itens ao longo do eixo principal do container */
+        /* space-around == Os itens são uniformemente distribuídos ao longo do eixo principal */
+    }
+    .first-column, .second-column {
+        width: 100%;
+    }
+    .sign-in-js .content::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
+    }
+    .form {
+        width: 90%;
+    }
+    /* KEYFRAME== animação usada DENTRO do Css*/
+    /* slidein= tipo de frame que deixa a animação "ir" */
+    @keyframes slidein {
+        /* onde começa */
+        from {
+            top: 0;
+            height: 40%;
+        }
+    /* no meio disso */
+        25% {
+            top: 5%;
+            height: 50%;
+        }
+        50% {
+            top: 25%;
+            height: 60%;
+        }
+        75% {
+            top: 45%;
+            height: 50%;
+        }
+    /* onde termina */
+        to {
+            top: 60%;
+            height: 40%;
+        }
+    }
+    /* animação quando "volta" */
+    @keyframes slideout {
+        from {
+            top: 60%;
+            height: 40%;
+        }
+        25% {
+            top: 45%;
+            height: 50%;
+        }
+        50% {
+            top: 25%;
+            height: 60%;
+        }
+        75% {
+            top: 5%;
+            height: 50%;
+        }
+        to {
+            top: 0;
+            height: 40%;
+        }
+    }
+}
+/* Menu */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.menu {
+  background: #fff;
+  border-radius: 30%;
+  width: 60px;
+  height: 60px; 
+  float: left;
+  bottom: 25px;
+  margin-left: 40px;
+  top: 30px;
+  position: fixed;
+  border: 1px solid black;
+}
+.hamburguer {
+  position: relative;
+  display: block;
+  background: #000;
+  width: 30px;
+  height: 2px;
+  top: 29px;
+  left: 15px;
+  transition: 0.5s ease-in-out;
+}
+.hamburguer:before,
+.hamburguer:after {
+  background:rgb(250, 186, 68);
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.hamburguer:before {
+  top: -10px;
+}
+.hamburguer:after {
+  bottom: -10px;
+}
+#menu-hamburguer {
+  display: none;
+}
+input:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+input:checked ~ label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+.barra{
+    background-color: black;
+    height: 600px;
+    width: 300px;
+    margin-top: 120px;
+    position: fixed;
+    transition: all .2s linear;
+    float: left;
+    left: -300px;
+    border-radius: 30px;
+    padding-left: 40px;
+}
+#menu-hamburguer:checked ~ .barra{
+    transform: translateX(300px);
+}
+.caixa{
+    margin-left: 10%;
+    margin-left: 10%;
+} 
+.cabecalho img{
+    width: 10%;
+    margin-top: -300px;
+    margin-right: 5%;
+    float:right;
+}
+ nav{
+    margin-left: 10%;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+    padding-top: 25px;
+    color: white;
+    display: list-item;
+    margin: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+.cabecalho #but_login{
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    color: rgb(250, 186, 68);
+    border-color:rgb(250, 186, 68);  
+    width: 120px;
+    height: 40px;
+    margin-left: -10%;
+}

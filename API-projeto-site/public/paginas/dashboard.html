@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasboard</title>
+    <link rel="stylesheet" href="../css/dashboards (1).css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    
+    <!-- script do google charts -->
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+
+    <!-- scripts do Chart.js -->
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <!-- <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script> -->
+    <script type="text/javascript" src="funcoes.js"></script>
+    
+</head>
+
+<body onload="function maximo()">
+    <!--header inicio-->
+
+    <div class="header">
+        <div class="container">
+            <img id="img" style="width: 200px; margin-left: 40px; margin-top: -430px;" src="https://www.yext.co.jp/wp-content/uploads/sites/11/2018/10/uber.png">
+            <div class="usuario">
+                <h3>Olá, <b id="b_usuario"></b></h3>
+                <h6 style="color: white;" id="b_email"></h6>
+            </div>
+            <!-- <h1 class="titulo">Light Security</h1> -->
+            <div class="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./dashboard.html">Dashboard</a></li>
+                    <li><a href="./dash.html">Relatórios semanais</a></li>
+                    <li><a href="../cadastro.html" class="highlight" onclick="logoff()">Sair</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <img src="LIGHT SECURITY.gif" alt="">
+            </div>
+        </div>
+    </div>
+    <!--header fim-->
+
+    <div class="dashboard">
+        <div class="container">
+            <h1>MAPEAMENTO DE LUMINOSIDADE POR ZONAS</h1>
+
+            <div class="img">
+                <!-- <img src="mapa.jpeg"> -->
+            </div>
+
+            <div class="container1">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="img/norte.gif" alt="">
+                            <h3>Centro</h3>
+                        </div>
+                    </div>
+        
+                    <div class="face face2">
+                        <div class="content">
+                            <p>De vasta importância histórica, o centro é a mais antiga zona de SP. Ainda estão de pé edifícios como o Pátio do Colégio, onde foi celebrada a primeira missa de fundação da então vila, em 1554.
+                               <br> Hoje vive um forte período de revitalização.
+                            </p>
+                        <a id="botaozona1" class="btn" onclick="chamargraficos(1)">Acompanhar</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="img/sul.gif" alt="">
+                            <h3>Norte</h3>
+                        </div>
+                    </div>
+        
+                    <div class="face face2">
+                        <div class="content">
+                            <p>
+                                Acima do rio Tietê fica a Zona Norte de SP, onde ficavam as históricas ferrovias e estradas velhas que conectavam o municipio aos vizinhos.
+                                Subdividida em regiões nordeste e noroeste.
+                            </p>
+                        <a id="botaozona2" class="btn" onclick="chamargraficos(2)">Acompanhar</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="img/leste.gif" alt="">
+                            <h3>Sul</h3>
+                        </div>
+                    </div>
+        
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Até 1935, a parte da cidade hoje determinada como Zona Sul era considerada o município de Santo Amaro. Hoje desponta como zona com a maior demanda por apartamentos novos na cidade, estimulada por uma nova lei de zoneamento municipal.
+                                Geograficamente gigante.
+                            </p>
+                        <a id="botaozona3" class="btn" onclick="chamargraficos(3)">Acompanhar</a>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+        
+            <br><br>
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="img/oeste.gif" alt="">
+                            <h3>Leste</h3>
+                        </div>
+                    </div>
+        
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Conhecida como “ZL”, essa enorme zona de SP fica ao leste do rio Tamanduateí. O nome indígena que marca o território é apto, visto que o espaço se manteve ocupado pelos povos originários durante o primeiro século da colonização portuguesa. </p>
+                        <a id="botaozona4" class="btn" onclick="chamargraficos(4)">Acompanhar</a>
+                        </div>
+                    </div>
+                </div>
+                    <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="img/centro.gif" alt="">
+                            <h3>Oeste</h3>
+                        </div>
+                    </div>
+        
+                    <div class="face face2">
+                        <div class="content">
+                            <p>A Oeste é uma das zonas de SP mais desenvolvidas em termos de infraestrutura e opções culturais e de comércio, entre shoppings, museus, galerias, escolas e universidades. 
+                                É onde fica boa parte dos bairros nobres da cidade.</p>
+                        <a id="botaozona5" class="btn" onclick="chamargraficos(5)">Acompanhar</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div_aguarde" style="width: 500px; height: 500px; margin-left: 286px;">
+            <canvas id="canvas_grafico" ></canvas>
+    </div>
+
+    <div id="dialogoverlay"></div>
+    <div id="dialogbox">
+      <div>
+        <div id="dialogboxhead"></div>
+        <div id="dialogboxbody"></div>
+        <div id="dialogboxfoot"></div>
+      </div>
+    </div>
+    
+    <button onclick="Alert.render('Alert Modificado')" style="margin-left: 50%;">Custom Modificado</button>
+    
+
+</body>
+</html>
+
+<script>
+
+let proximaAtualizacao;
+
+    window.onload = obterDadosGraficoPrimeiraVez(1);
+
+    function alterarCoresBotoes(idRegiao) {
+        console.log("executei alterarCoresBotoes")
+        botaozona1.className = "btn"
+        botaozona2.className = "btn"
+        botaozona3.className = "btn"
+        botaozona4.className = "btn"
+        botaozona5.className = "btn"
+
+        if (idRegiao == "1") {
+            botaozona1.className += " btn-now"
+        } else if (idRegiao == "2") {
+            botaozona2.className += " btn-now"
+        } else if (idRegiao == "3") {
+            botaozona3.className += " btn-now"
+        } else if (idRegiao == "4") {
+            botaozona4.className += " btn-now"
+        } else if (idRegiao == "5") {
+            botaozona5.className += " btn-now"
+        }
+    }
+
+    function chamargraficos(idRegiao) {
+        console.log("executei chamargraficos")
+        obterDadosGraficoPrimeiraVez(idRegiao)
+        //atualizarGrafico(idcaminhao)
+
+        alterarCoresBotoes(idRegiao);
+
+    }
+    
+    // altere aqui as configurações do gráfico
+    // (tamanhos, cores, textos, etc)
+    function configurarGrafico() {
+        console.log("executei configurarGrafico")
+        var configuracoes = {
+            responsive: true,
+            animation: { duration: 500 },
+            hoverMode: 'index',
+            stacked: false,
+            title: {
+                display: true,
+                text: 'Histórico recente de luminosidade'
+            },
+            scales: {
+                yAxes: [{
+                    type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                    display: true,
+                    position: 'left',
+                    id: 'y-temperatura',
+                }, {
+                    // type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                    // display: true,
+                    // position: 'right',
+                    // id: 'y-umidade',
+
+                    // grid line settings
+                    // gridLines: {
+                    //     drawOnChartArea: false, // only want the grid lines for one axis to show up
+                    // },
+                }],
+            }
+        };
+
+        return configuracoes;
+    }
+
+    // altere aqui como os dados serão exibidos
+    // e como são recuperados do BackEnd
+    function obterDadosGraficoPrimeiraVez(idRegiao) {
+        console.log("executei obterDadosGraficoPrimeiraVez")
+        alterarCoresBotoes(idRegiao);
+
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        }
+
+        fetch(`/leituras/ultimas/${idRegiao}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    var dados = {
+                        labels: [],
+                        datasets: [
+                            {
+                                yAxisID: 'y-temperatura',
+                                label: 'Luminosidade',
+                                borderColor: 'rgba(255,0,0,1)',
+                                backgroundColor: 'rgba(255,0,0,1)',
+                                fill: false,
+                                data: []
+                            }
+                            // {
+                            //     yAxisID: 'y-umidade',
+                            //     label: 'Umidade',
+                            //     borderColor: 'rgba(255,0,255,1)',
+                            //     backgroundColor: 'rgba(255,0,255,1)',
+                            //     fill: false,
+                            //     data: []
+                            // }
+                        ]
+                    };
+                    var registro = resposta[0];
+                    for (i = 0; i < registro.length; i++) {
+                        var reg = registro[i];
+                        dados.labels.push(reg.momento_grafico);
+                        dados.datasets[0].data.push(reg.luminosidade);
+                        // dados.datasets[1].data.push(registro.umidade);
+
+                    }
+                    console.log(JSON.stringify(dados));
+                     div_aguarde.style.display = 'none';
+                    plotarGrafico(dados, idRegiao);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+    
+    // só mexer se quiser alterar o tempo de atualização
+    // ou se souber o que está fazendo!
+    function atualizarGrafico(idRegiao, dados) {
+        console.log("executei atualizarGrafico")
+        fetch(`/leituras/tempo-real/${idRegiao}`, { cache: 'no-store' }).then(function (response) {
+            console.log("Estou tentando pegar idRegiao = ", idRegiao)
+            if (response.ok) {
+                response.json().then(function (novoRegistro) {
+
+                    console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+                    console.log(`Dados atuais do gráfico: ${dados}`);
+
+                    // tirando e colocando valores no gráfico
+                    dados.labels.shift(); // apagar o primeiro
+                    dados.labels.push(novoRegistro.momento_grafico); // incluir um novo momento
+                    dados.datasets[0].data.shift();  // apagar o primeiro de temperatura
+                    // dados.datasets[1].data.shift();  // apagar o primeiro de umidade
+                    dados.datasets[0].data.push(novoRegistro.luminosidade); // incluir uma nova leitura de temperatura
+                    // dados.datasets[1].data.push(novoRegistro.umidade); // incluir uma nova leitura de umidade
+
+                    console.log("minha zona é a: " + idRegiao)
+
+                    window.grafico_linha.update();
+                    var regiao;
+                    if(novoRegistro.fk_regiao == 1){
+                            regiao = 'centro';
+                        }else if(novoRegistro.fk_regiao == 2){
+                            regiao = 'norte';
+                        }else if(novoRegistro.fk_regiao == 3){
+                            regiao = 'sul';
+                        }else if(novoRegistro.fk_regiao == 4){
+                            regiao = 'leste';
+                        }else if(novoRegistro.fk_regiao == 5){
+                            regiao = 'oeste';
+                        }
+
+                    if(novoRegistro.luminosidade >= 1000){
+                        var r = document.querySelector(':root');
+                    r.style.setProperty('--alerta', 'orange' );
+                        Alert.render(`<h3>Iluminação baixissima na região ${regiao}</h3>`);
+                        
+                    } else if(novoRegistro.luminosidade >= 900){
+                        var r = document.querySelector(':root');
+                        r.style.setProperty('--alerta', '#d8496c' );
+                        Alert.render(`<h3>Iluminação baixa na região ${regiao}</h3>`);
+                    }
+                    /* demonstração */
+                    else if(novoRegistro.luminosidade >= 500){
+                        var r = document.querySelector(':root');
+                        r.style.setProperty('--alerta', 'blue' );
+                        Alert.render(`<h3>Iluminação baixa na região ${regiao}</h3>`);
+                    }
+
+
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idRegiao, dados), 5000);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(idRegiao, dados), 5000);
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+     // só altere aqui se souber o que está fazendo!
+     function plotarGrafico(dados, idRegiao) {
+        console.log("executei plotarGrafico")
+        console.log('iniciando plotagem do gráfico...');
+        div_aguarde.style.display = 'block';
+
+        var ctx = canvas_grafico.getContext('2d');
+        window.grafico_linha = Chart.Line(ctx, {
+            data: dados,
+            options: configurarGrafico()
+        });
+
+        setTimeout(() => atualizarGrafico(idRegiao, dados), 2000);
+    }
+
+
+    function sendData() {
+        var http = new XMLHttpRequest();
+        http.open('GET', 'http://localhost:9001/api/sendData', false);
+        http.send(null);
+    }
+    
+    // Descomente abaixo se quiser inserir dados a cada X segundos
+     setInterval(() => {
+      sendData();
+     }, 2000);
+
+     
+function CustomAlert(){
+    this.render = function(dialog){
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var dialogoverlay = document.getElementById('dialogoverlay');
+        var dialogbox = document.getElementById('dialogbox');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = winH+"px";
+        dialogbox.style.left = (winW/2) - (550 * .5)+"px";
+        dialogbox.style.top = "100px";
+        dialogbox.style.display = "block";
+        document.getElementById('dialogboxhead').innerHTML = `<h1><i class="fas fa-exclamation-triangle"></i> Alerta!</h1>`;
+        document.getElementById('dialogboxbody').innerHTML = dialog;
+        document.getElementById('dialogboxfoot').innerHTML = '<button class="but" onclick="Alert.ok()">OK</button>';
+        document.getElementById('dialogboxfoot').innerHTML += '<a href=""><button class="but" onclick="Alert.verificar()">Verificar taxas</button></a>';
+    }
+	this.ok = function(){
+		document.getElementById('dialogbox').style.display = "none";
+		document.getElementById('dialogoverlay').style.display = "none";
+	}
+}
+var Alert = new CustomAlert();
+
+
+
+// TESTE PARA BUSCAR DADOS NO BD 
+
+
+
+
+
+</script>

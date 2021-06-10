@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="imagem/jfif" href="../logopreto.jfif">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="div_banner">
+        <div class="cabecalho">
+            <a href="../public/index.html"> <img src="../public/img/logo.gif" alt=""> </a>
+            <input id="menu-hamburguer" type="checkbox" />
+            <label for="menu-hamburguer">
+                <div class="menu">
+                    <span class="hamburguer"></span>
+                </div>
+            </label>
+            <div class="barra">
+                <nav>
+                    <ul>
+                        <li> <a href="../public/index.html">Home</a> </li>
+                        <li> <a href="./paginas/sobre.html"> Sobre Nós</a> </li>
+                        <li> <a href="./paginas/services_(1).html"> Serviços </a> </li>
+                        <li> <a href="./paginas/suport.html"> Suporte </a> </li>
+                        <li> <a href="./paginas/contato.html"> Contato </a> </li>
+                        <li> <a href="./paginas/cadastro.html"> <button id="but_login">Login</button> </a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    </label>
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <img src="../img/logo.gif" alt="">
+                <h2 class="title title-primary">Bem vindx de volta!</h2>
+                <p class="description description-primary">Para se manter conectado conosco</p>
+                <p class="description description-primary">por favor, entre com seus dados</p>
+                <button id="signin" class="btn btn-primary">sign in</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Cadastro</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="https://www.facebook.com/">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="https://accounts.google.com/">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="https://br.linkedin.com/">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">ou use seu email para entrar:</p>
+                <form class="form" method="POST" onsubmit="return cadastrar()" name="form" id="form_cadastro">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Nome" id="nome" name="nome" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email" id="email" name="login" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha" id="senha" name="senha" required>
+                    </label>
+
+                    <button class="btn btn-second">sign up</button>
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+        
+        <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+            Erro no cadastro
+        </div>
+
+        <div class="content second-content">
+            <div class="first-column">
+                <img src="../Home - Joyce/imagem/logo.gif" alt="">
+                <h2 class="title title-primary">Olá!!</h2>
+                <p class="description description-primary">Entre com suas informações</p>
+                <p class="description description-primary">e fique ligado!</p>
+                <button id="signup" class="btn btn-primary">sign up</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Login</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="https://www.facebook.com/">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="https://accounts.google.com/">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="https://br.linkedin.com/">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">ou use seu user:</p>
+                <form class="form" method="POST" onsubmit="return entrar()" name="form" id="form_login">
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="User" id="inp_email" name="login" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha" id="inp_senha" name="senha" required>
+                    </label>
+
+                    <a class="password" href="#">esqueceu sua senha?</a>
+                    <button class="btn btn-second">sign in</button>
+                </form>
+            </div><!-- second column -->
+        </div><!-- second-content -->
+    </div>
+    <script src="js/development.js"></script> <!-- direcionando o script -->
+</body>
+
+</html>
